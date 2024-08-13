@@ -3,13 +3,19 @@
 	src: url(/fonts/FredokaOne-Regular.ttf);
 }
 
+@font-face {
+	font-family: Din;
+	src: url(/fonts/DIN.ttf);
+}
+
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(-45deg, #ee7752, gold, #23a6d5, beige);
+    /*background: linear-gradient(-45deg, #ee7752, gold, #23a6d5, beige);*/
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+	background-color: antiquewhite;
 }
 
 @keyframes gradient {
@@ -40,9 +46,33 @@ input{
 	border-radius: 2px;
 	border: transparent 2px solid;
 	box-shadow: black 2px 2px 2px;
+	text-align: center;
 }
 
 button{
 	width: 10vw;
 	height: 5vh;
+	font-family: Din;
+	border: solid transparent;
+	transition: all 1s ease-in-out;
+	border-radius: 10px;
+}
+
+button:hover{
+	background-color: black;
+	color: aliceblue;
+}
+
+#meaning{
+	display: flex;
+	text-align: center;
+	width: 100vw;
+	justify-content: center;
+	margin-top: 4vh;
+	font-size: larger;
+	font-family: Din;
+}
+
+#search{
+	font-family: Din;
 }
