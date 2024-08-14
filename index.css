@@ -8,6 +8,11 @@
 	src: url(/fonts/DIN.ttf);
 }
 
+@font-face {
+	font-family: without;
+	src: url(/fonts/WithoutAltSans-Black.ttf);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -37,7 +42,7 @@ body{
 }
 
 #content h1{
-	font-family: fred;
+	font-family: Without;
 }
 
 input{
@@ -52,25 +57,26 @@ input{
 button{
 	width: 10vw;
 	height: 5vh;
-	font-family: Din;
 	border: solid transparent;
 	transition: all 1s ease-in-out;
 	border-radius: 10px;
+	background-color: gold;
+	font-family: fred;
 }
 
 button:hover{
 	background-color: black;
-	color: aliceblue;
+	color: gold;
 }
 
 #meaning{
 	display: flex;
-	text-align: center;
-	width: 100vw;
-	justify-content: center;
+	justify-content: left;
 	margin-top: 4vh;
-	font-size: larger;
-	font-family: Din;
+	font-size: large;
+	font-family:Helvetica;
+	text-align: center;
+	letter-spacing: normal;
 }
 
 #search{
