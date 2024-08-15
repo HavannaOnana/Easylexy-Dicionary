@@ -36,8 +36,6 @@ fetch('./dictionary.json')
             .replace(/(\d+\.\s+)/g, '<br><br>$1'); // Add breaks before each numbered item
             // Ensure multiple spaces are condensed into a single space
             cleanedMeaning = cleanedMeaning.replace(/\s+/g, '    ').trim();
-
-        console.log('Cleaned meaning:', cleanedMeaning);
         meaning.innerHTML = cleanedMeaning;  // Display the cleaned meaning in the HTML element
     } else {
         meaning.innerHTML = `Word "${searchTerm}" not found in the dictionary`;

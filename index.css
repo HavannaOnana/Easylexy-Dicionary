@@ -1,6 +1,6 @@
 @font-face {
-	font-family:fred ;
-	src: url(/fonts/FredokaOne-Regular.ttf);
+	font-family:monserrat ;
+	src: url(/fonts/Montserrat-Regular.otf);
 }
 
 @font-face {
@@ -13,39 +13,32 @@
 	src: url(/fonts/WithoutAltSans-Black.ttf);
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    /*background: linear-gradient(-45deg, #ee7752, gold, #23a6d5, beige);*/
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-	background-color: antiquewhite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-#content{
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	box-sizing: border-box;
+  }
+  
+  body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;  /* Ensure body covers the full viewport height */
+	background-color: beige;
+  }
+  
+  #content {
 	text-align: center;
 	width: 100vw;
 	margin-top: 10%;
-}
+	flex: 1;  /* Allow the content to grow and take up remaining space */
+  }
 
-#content h1{
-	font-family: Without;
-}
+  #content{
+	font-family: without;
+  }
 
-input{
+  input{
 	width: 30vw;
 	height: 5vh;
 	border-radius: 2px;
@@ -55,13 +48,14 @@ input{
 }
 
 button{
-	width: 10vw;
 	height: 5vh;
 	border: solid transparent;
 	transition: all 1s ease-in-out;
 	border-radius: 10px;
 	background-color: gold;
-	font-family: fred;
+	font-family: monserrat;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 button:hover{
@@ -71,14 +65,69 @@ button:hover{
 
 #meaning{
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	margin-top: 4vh;
 	font-size: large;
-	font-family:Helvetica;
+	font-family:monserrat;
 	text-align: center;
 	letter-spacing: normal;
+	padding: 3%;
 }
 
 #search{
-	font-family: Din;
+	font-family: without	;
 }
+
+  
+  #meaning {
+	flex: 1;  /* Allow #meaning to grow */
+  }
+  
+  footer{
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.811);
+	color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	padding-top: 5vh;
+	margin-bottom: 0vh;
+}
+
+
+footer .icons{
+	font-size: 2em;
+	
+}
+
+.icons ion-icon{
+	margin-left: 2%;
+	border-radius: 100%;
+	padding:0.5%;
+	border: solid 5px white;
+	background-color: white;
+	color: rgb(22, 22, 22);
+}
+
+nav a{
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: aliceblue;
+	margin-left: 2%;
+}
+
+nav {
+	margin-top: 3vh;
+}
+
+footer p{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin-bottom: 0vh;
+	width: 100vw;
+	background-color: black;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
