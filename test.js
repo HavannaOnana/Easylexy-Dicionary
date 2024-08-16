@@ -42,8 +42,25 @@ fetch('./dictionary.json')
     }
 }
 
-  
-
   button.addEventListener("click", searchWord);
+
+  //dark mode
+  const darkmode = document.querySelector(".darkmode")
+  darkmode.addEventListener("click",function(){
+    const body = document.querySelector(".body")
+    const footer = document.querySelector("footer")
+    body.style.backgroundColor = 'black';
+    body.style.color = 'white';
+    footer.style.backgroundColor = 'gold'
+    const footerLinks = footer.querySelectorAll("a");
+    footerLinks.forEach(link => {
+      link.style.color = 'black';
+    });
+
+    
+
+  })
+
+
 })
 .catch(error => console.error('Error loading JSON:', error));

@@ -30,7 +30,25 @@ html, body {
   #logo{
 	font-family: without;
 	font-size: medium;
-	margin-left: 3vh;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	justify-content: space-around;
+	align-items: center;
+  }
+
+  #logo ion-icon{
+	font-size: x-large;
+	border: 2px solid black;
+	padding: 1.7vh;
+	border-radius: 100%;
+	background-color: gold;
+	transition: color 0.7s ease-in, background-color 0.7s ease-in;
+  }
+
+  #logo ion-icon:hover{
+    color: gold;
+	background-color: black;
   }
   
   #content {
@@ -49,7 +67,7 @@ html, body {
 	height: 5vh;
 	border-radius: 2px;
 	border: transparent 2px solid;
-	box-shadow: black 2px 2px 2px;
+	box-shadow: black 1px 1px 1px 1px;
 	text-align: center;
 }
 
@@ -91,8 +109,8 @@ button:hover{
   
   footer{
 	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.811);
-	color: aliceblue;
+	background-color: black;
+	color: gold;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -114,15 +132,23 @@ footer .icons{
 	padding:0.5%;
 	border: solid 5px white;
 	background-color: white;
-	color: rgb(22, 22, 22);
+	color: black;
+	transition: background-color 1s ease-in  , border 1s ease-in;
+}
+
+.icons ion-icon:hover{
+   background-color: gold;
+   border: solid 5px gold;
 }
 
 nav a{
 	text-decoration: none;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: aliceblue;
+	color: gold;
 	margin-left: 2%;
 }
+
+
 
 nav {
 	margin-top: 3vh;
@@ -132,8 +158,9 @@ footer p{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	margin-bottom: 0vh;
 	width: 100vw;
-	background-color: black;
+	background-color: gold;
 	padding-top: 2vh;
 	padding-bottom: 2vh;
+	color: black;
 }
 
