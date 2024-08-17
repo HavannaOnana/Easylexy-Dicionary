@@ -46,6 +46,7 @@ fetch('./dictionary.json')
 
   //dark mode
   const darkmode = document.querySelector(".darkmode")
+  // adding an event listener to it 
   darkmode.addEventListener("click",function(){
     const body = document.querySelector(".body")
     const footer = document.querySelector("footer")
@@ -56,9 +57,9 @@ fetch('./dictionary.json')
     footerLinks.forEach(link => {
       link.style.color = 'black';
     });
-
-    
-
+    const icondark = document.querySelector(".darkmode");
+    icondark.innerHTML = '<ion-icon name="sunny"></ion-icon>'
+    icondark.style.color = 'black'
   })
 
 
