@@ -43,24 +43,47 @@ fetch('./dictionary.json')
 }
 
   button.addEventListener("click", searchWord);
+  const searchInput = document.querySelector("#search");
+  // Trigger search on pressing "Enter" key
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      searchWord();
+    }
+  });
 
-  //dark mode
-  const darkmode = document.querySelector(".darkmode")
-  // adding an event listener to it 
-  darkmode.addEventListener("click",function(){
-    const body = document.querySelector(".body")
-    const footer = document.querySelector("footer")
-    body.style.backgroundColor = 'black';
-    body.style.color = 'white';
-    footer.style.backgroundColor = 'gold'
+// Select the dark mode toggle button
+const darkmode = document.querySelector(".darkmode");
+
+// Add an event listener to the button
+darkmode.addEventListener("click", function() {
+    const body = document.querySelector(".body");
+    const footer = document.querySelector("footer");
     const footerLinks = footer.querySelectorAll("a");
-    footerLinks.forEach(link => {
-      link.style.color = 'black';
-    });
     const icondark = document.querySelector(".darkmode");
-    icondark.innerHTML = '<ion-icon name="sunny"></ion-icon>'
-    icondark.style.color = 'black'
-  })
+
+    // Check if dark mode is currently active
+    if (body.style.backgroundColor === 'black') {
+        // Switch to normal mode
+        body.style.backgroundColor = 'beige';
+        body.style.color = 'black';
+        footer.style.backgroundColor = 'rgba(0, 0, 0, 0.811)';
+        footerLinks.forEach(link => {
+            link.style.color = 'aliceblue';
+        });
+        icondark.innerHTML = '<ion-icon name="moon"></ion-icon>';
+        icondark.style.color = 'white';
+    } else {
+        // Switch to dark mode
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        footer.style.backgroundColor = 'gold';
+        footerLinks.forEach(link => {
+            link.style.color = 'black';
+        });
+        icondark.innerHTML = '<ion-icon name="sunny"></ion-icon>';
+        icondark.style.color = 'black';
+    }
+});
 
 
 })
