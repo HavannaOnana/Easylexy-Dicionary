@@ -90,7 +90,7 @@ button:hover{
 #meaning{
 	display: flex;
 	justify-content: center;
-	margin-top: 4vh;
+	margin-top: 10vh;
 	font-size: large;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	text-align: center;
@@ -164,3 +164,26 @@ footer p{
 	color: black;
 }
 
+#suggestionsBox {
+	background-color: white;
+	border: 1px solid #ccc;
+	max-height: 200px; /* Limit the height for better display */
+	width: 30vw; /* Set the width to be smaller (30% of viewport width) */
+	margin: 0 auto; /* Center the suggestions box horizontally */
+	position: absolute; /* Position it relative to the nearest positioned ancestor */
+	z-index: 1000; /* Ensure it stays on top */
+	overflow-y: auto; /* Enable vertical scrolling if there are many suggestions */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for better visibility */
+	left: 0; 
+	right: 0;
+  }
+  
+  .suggestion-item {
+	padding: 0.2%;
+	cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+	background-color: #f0f0f0;
+  }
+  
