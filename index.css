@@ -29,16 +29,16 @@ html, body {
 
   #logo{
 	font-family: without;
-	font-size: medium;
+	font-size: small;
 	display: flex;
 	flex-direction: row;
-	width: 100vw;
+	width: auto;
 	justify-content: space-around;
 	align-items: center;
   }
 
   #logo ion-icon{
-	font-size: x-large;
+	font-size: medium;
 	border: 2px solid black;
 	padding: 1.7vh;
 	border-radius: 100%;
@@ -60,6 +60,10 @@ html, body {
 
   #content{
 	font-family: without;
+  }
+
+  #content h1{
+	font-size: large;
   }
 
   input{
